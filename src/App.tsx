@@ -1,11 +1,12 @@
-import './App.css'
+import './App.css';
+import Home from './pages/home/Home.tsx';
 
 function App() {
-  return (
-    <>
-      <h1>MS Learn Fabric KO-KR</h1>
-    </>
-  )
+    return (
+        <>
+            <Home />
+        </>
+    );
 }
 
-export default App
+export default App;
