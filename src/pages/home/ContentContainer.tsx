@@ -7,26 +7,38 @@ import {
     CardTitle,
 } from '@/components/ui/card.tsx';
 
+
 function ContentContainer() {
     return (
-        <>
-            <Content />
-        </>
+        <div className={"content-wrapper"}>
+            <Content title={"fabricrealtimelab"}
+                     description={"Microsoft Fabric real-time lab ko-kr"}
+                     content={""}
+                     footer={""}
+            />
+        </div>
     );
 }
 
-function Content() {
+interface CardProps {
+    title: string;
+    description: string;
+    content: string;
+    footer: string;
+}
+function Content(props: CardProps) {
+    const {title, description, content, footer} = props;
     return (
-        <Card>
+        <Card className={"size-80"}>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle>{title}</CardTitle>
+                <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>{content}</p>
             </CardContent>
             <CardFooter>
-                <p>Card Footer</p>
+                <p>{footer}</p>
             </CardFooter>
         </Card>
     );
